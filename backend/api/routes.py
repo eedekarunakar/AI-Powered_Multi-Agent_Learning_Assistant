@@ -1,0 +1,18 @@
+from fastapi import APIRouter
+
+router = APIRouter()
+
+
+@router.get("/")
+def home():
+    return {
+        "message": "Welcome to AI Powered Multi-Agent Learning Assistant"
+    }
+
+
+@router.get("/health")
+def health():
+    return {
+        "status": "Healthy",
+        "service": "Running"
+    }
